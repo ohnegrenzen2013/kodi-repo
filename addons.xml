@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+  <addon id="repository.h0rst" name="H0rSt Repository" version="1.0.0" provider-name="ohnegrenzen2013">
+    <extension point="xbmc.addon.repository" name="H0rSt Repository">
+      <info compressed="true">https://cr0c0d0c.github.io/cr0c0d0c_X_m0DUlh0ST/addons.xml.gz</info>
+      <checksum>https://cr0c0d0c.github.io/cr0c0d0c_X_m0DUlh0ST/addons.xml.md5</checksum>
+      <datadir zip="true">https://cr0c0d0c.github.io/cr0c0d0c_X_m0DUlh0ST/</datadir>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="de_DE">H0rSt – m0dulh0st Add-ons für Kodi</summary>
+      <summary lang="en_GB">H0rSt – m0dulh0st add-ons for Kodi</summary>
+      <description lang="de_DE">Dieses Repository stellt den H0rSt-Rezeptserver als Kodi-Dienst bereit. Nach der Installation in Kodi als Stremio-Addon eintragen: http://127.0.0.1:7000/manifest.json</description>
+      <description lang="en_GB">This repository provides the H0rSt recipe server as a Kodi service. After installation, add it to Kodi as a Stremio addon: http://127.0.0.1:7000/manifest.json</description>
+      <platform>all</platform>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+      <license>GPL-2.0-or-later</license>
+    </extension>
+  </addon>
+  <addon id="service.h0rst.kiosk" name="H0rSt Kiosk" version="1.0.0" provider-name="ohnegrenzen2013">
+    <requires>
+      <import addon="xbmc.python" version="3.0.1" />
+      <import addon="service.rezeptserver" version="0.64.0" />
+      <import addon="browser.chrome" optional="true" />
+      <import addon="browser.chromium" optional="true" />
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="login" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="de_DE">H0rSt als Kiosk-Browser starten</summary>
+      <summary lang="en_GB">Launch H0rSt as a kiosk browser</summary>
+      <description lang="de_DE">Startet Chromium im Kiosk-Modus und öffnet H0rSt direkt (nur x86_64 LibreELEC). Auf anderen Geräten wird die Netzwerkadresse angezeigt.</description>
+      <description lang="en_GB">Launches Chromium in kiosk mode pointing to H0rSt (x86_64 LibreELEC only). On other devices, shows the network address.</description>
+      <platform>all</platform>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+      <license>GPL-2.0-or-later</license>
+    </extension>
+  </addon>
+  <addon id="service.rezeptserver" name="m0dulh0st - H0rSt" version="0.68.0" provider-name="ohnegrenzen2013">
+    <requires>
+      <import addon="xbmc.python" version="3.0.1" />
+      <import addon="script.module.yt-dlp" optional="true" />
+    </requires>
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="de_DE">JSON-Rezepte als Stremio-Addon für Jacktook</summary>
+      <summary lang="en_GB">JSON recipes served as a Stremio addon for Jacktook</summary>
+      <description lang="de_DE">Startet den Rezeptserver auf diesem Gerät. In Jacktook als Stremio-Addon eintragen: http://127.0.0.1:7000/manifest.json</description>
+      <description lang="en_GB">Runs the recipe server on this device. Add it to Jacktook as a Stremio addon: http://127.0.0.1:7000/manifest.json</description>
+      <platform>all</platform>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+      <license>GPL-2.0-or-later</license>
+    </extension>
+  </addon>
+</addons>
