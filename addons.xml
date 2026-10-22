@@ -41,7 +41,7 @@
       <license>GPL-2.0-or-later</license>
     </extension>
   </addon>
-  <addon id="service.rezeptserver" name="m0dulh0st - H0rSt" version="0.68.17" provider-name="ohnegrenzen2013">
+  <addon id="service.rezeptserver" name="m0dulh0st - H0rSt" version="0.68.18" provider-name="ohnegrenzen2013">
     <requires>
       <import addon="xbmc.python" version="3.0.1" />
       <import addon="script.module.yt-dlp" optional="true" />
